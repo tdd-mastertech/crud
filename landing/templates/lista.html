@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-    <h1>Lista de suas frases e dúvida</h1>
-        <p>Nome do Aluno: </p>
-        <p>Frase:</p>
+    {% for item in listar_frase %}
+        <h1>Lista de suas frases e dúvida</h1>
+         <p>Nome do Aluno: </p>
+            <p>Frase:</p>
         <hr>
+     {% endfor %}
 
 
 {% endblock %}

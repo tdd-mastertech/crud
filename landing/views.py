@@ -18,4 +18,11 @@ def index(request):
     return render(request, 'index.html')
 
 def listar(request):
-    return render(request, 'lista.html')
+    listar_frase = Aluno.objects.all()
+    args = {
+        'listar_frase': listar_frase
+    }
+    return render(request, 'lista.html', args)
+
+
+        
